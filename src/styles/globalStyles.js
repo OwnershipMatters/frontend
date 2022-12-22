@@ -5,12 +5,12 @@ export const GlobalStyles = createGlobalStyle`
     :root {
 
         /* COLORS */
-        --theme-color: #c25b38;
+        --theme-color: #933D1B;
         --background-color: none;
 
         /* FONT FAMILY */
         --primary-font: 'Playfair Display', serif;
-        --secondary-font: 'Poppins', sans-serif;
+        --secondary-font: 'Nixie One', cursive;
 
         /* SCREEN SIZES */
         --mobile-screen: 480px;
