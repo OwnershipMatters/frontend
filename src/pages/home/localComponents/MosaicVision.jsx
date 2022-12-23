@@ -1,5 +1,33 @@
+import styled from "styled-components"
+
+import TextBox from "../../../components/TextBox"
+
 export default function MosaicVision(){
     return(
-        <h1>Mosaic Vision</h1>
+        <Container>
+            <h1>Mosaic Vision</h1>
+            <div className="preview-texts">
+                <TextBox/>
+                <TextBox/>
+                <TextBox/>
+                <TextBox/>
+            </div>
+        </Container>
     )
 };
+
+const Container = styled.div`
+    width: 1150px;
+    margin-top: 46px;
+    h1{
+        font-family: "Work Sans";
+        font-weight: 400;
+        font-size: 60px;
+    }
+    .preview-texts{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 45px;
+        row-gap: 45px;
+    }
+`
