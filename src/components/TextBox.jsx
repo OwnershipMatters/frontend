@@ -26,6 +26,9 @@ const Container = styled.div`
     height: 308px;
     background-color: #D9D9D9;
     display: flex;
+    :hover{
+        cursor: pointer;
+    }
     .left{
         display: flex;
         align-items: center;

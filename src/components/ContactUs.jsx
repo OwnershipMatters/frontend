@@ -55,6 +55,8 @@ const Container = styled.div`
   background-color: black;
   h1 {
     color: #f7f3f2;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
     margin-top: 60px;
     font-size: 45px;
   }
