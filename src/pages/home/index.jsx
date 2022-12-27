@@ -6,7 +6,7 @@ import NavBar from "../../components/Navbar";
 import GetToKnow from "./localComponents/GetToKnow";
 import MosaicVision from "./localComponents/MosaicVision";
 import Mural from "./localComponents/Mural";
-import ShareOrVision from "./localComponents/ShareOrVision";
+import ShareYourVision from "./localComponents/ShareYourVision";
 
 export default function Home() {
 
@@ -16,7 +16,7 @@ export default function Home() {
       <Mural/>
       <GetToKnow/>
       <MosaicVision/>
-      <ShareOrVision/>
+      <ShareYourVision/>
       <ContactUs/>
     </Container>
   );

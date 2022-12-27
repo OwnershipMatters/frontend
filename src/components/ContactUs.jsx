@@ -42,13 +42,14 @@ export default function ContactUs(){
           <Button>
             <h3>Send</h3>
           </Button>
+          <h5>© 2023 A PROJECT OF SOLIDARITY HALL, 501(C)3</h5>
         </Container>
       );
 };
 
 const Container = styled.div`
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +71,12 @@ const Container = styled.div`
     :hover {
       transform: scale(1.01);
     }
+  }
+  h5{
+    font-family: "Work Sans";
+    color: #f7f3f2;
+    font-size: 25px;
+    margin-top: 60px;
   }
 `;
 

@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export default function ShareOrVision(){
+export default function ShareYourVision(){
     return(
         <Container>
-            <h1>Share or Vision</h1>
+            <h1>Share Your Vision</h1>
             <h2>Our team will provide the editorial <br/> guidance you need to publish your story</h2>
             <Button>
                 <h3>More info</h3>
