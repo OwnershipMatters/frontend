@@ -3,41 +3,31 @@ import styled from "styled-components";
 
 export default function ContactUs(){
 
-    const [name, setName] = useState("");
-    const [organization, setOrganization] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-    const inputNames = ["Name", "Organization", "Email*", "Message"];
-    const inputValues = [name, organization, email, message];
-    const info = { name, organization, email, message };
-
-    function handleChange(value, type) {
-        if (type === "Name") {
-          setName(value);
-        }
-        if (type === "Organization") {
-          setOrganization(value);
-        }
-        if (type === "Email*") {
-          setEmail(value);
-        }
-        if (type === "Message") {
-          setMessage(value);
-        }
-      }
+  const [messaeData, setMessageData] = useState({
+    name: "",
+    message: "",
+    organization: ""
+  })
 
     return (
         <Container>
-          <h1 onClick={() => console.log(info)}>Contact us</h1>
+          <h1>Contact us</h1>
           <InputArea>
-            {inputNames.map((inputName, index) => (
-              <input
-                key={index}
-                placeholder={inputName}
-                value={inputValues[index]}
-                onChange={(event) => handleChange(event.target.value, inputName)}
-              />
-            ))}
+            <input 
+              placeholder="Name"
+              value={messaeData.name}
+              onChange={(e)=> setMessageData({...messaeData, name: e.target.value})}
+            />
+            <input
+              placeholder="Message"
+              value={messaeData.message}
+              onChange={(e)=> setMessageData({...messaeData, message: e.target.value})}
+            />
+            <input
+              placeholder="Email"
+              value={messaeData.organization}
+              onChange={(e)=> setMessageData({...messaeData, organization: e.target.value})}
+            />
           </InputArea>
           <Button>
             <h3>Send</h3>
@@ -95,12 +85,12 @@ const InputArea = styled.div`
     border: none;
     padding: 0px 3px 15px 3px;
     margin: 15px 25px 0px 25px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     max-width: 260px;
-    width: 100%;
+    width: 334px;
     height: 40px;
-    font-size: 16px;
-    font-family: var(--secondary-font);
+    font-size: 30px;
+    font-family: "Work Sans";
     ::placeholder {
       color: #f7f3f2;
     }
@@ -121,6 +111,7 @@ const Button = styled.div`
   cursor: pointer;
   transition: 0.1s;
   margin-top: 50px;
+  margin-left: 0px;
   :hover {
     transform: scale(1.05);
   }

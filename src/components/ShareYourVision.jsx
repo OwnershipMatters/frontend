@@ -43,8 +43,7 @@ const Button = styled.div`
     h3{
         color: #ffffff;
         font-family: "Work Sans";
-        font-size: 20px;
-        
+        font-size: 20px;  
     }
 ;
 `

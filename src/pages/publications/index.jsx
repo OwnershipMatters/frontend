@@ -1,20 +1,14 @@
 import styled from "styled-components";
+
 import ContactUs from "../../components/ContactUs";
 import NavBar from "../../components/Navbar";
-
-import GetToKnow from "./localComponents/GetToKnow";
-import MosaicVision from "./localComponents/MosaicVision";
-import Mural from "./localComponents/Mural";
 import ShareYourVision from "./../../components/ShareYourVision";
 
-export default function Home() {
+export default function Publications() {
 
   return (
     <Container>
-      <NavBar highlightedTab={"Home"} />
-      <Mural/>
-      <GetToKnow/>
-      <MosaicVision/>
+      <NavBar highlightedTab={"Publications"} />
       <ShareYourVision/>
       <ContactUs/>
     </Container>
