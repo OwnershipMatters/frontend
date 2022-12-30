@@ -11,6 +11,10 @@ export default function PublicationsDisplay(){
             <TextBox/>
             <TextBox/>
             <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
         </Container>
     )
 };
