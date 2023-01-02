@@ -30,6 +30,7 @@ export default function OurMultiverse(){
 const Container = styled.div`
     width: 1280px;
     margin-top: 20px;
+    margin-bottom: -4px;
     img{
         width: 1280px;
     }
