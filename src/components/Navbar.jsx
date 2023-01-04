@@ -31,6 +31,7 @@ const Container = styled.div`
     display: flex;
     padding-top: 25px;
     width: 1280px;
+    margin-left: -10px;
     .buttons{
         padding-left: 129px;
         display: flex;

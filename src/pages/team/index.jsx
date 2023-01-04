@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 import ContactUs from "../../components/ContactUs";
 import NavBar from "../../components/Navbar";
+import Header from "./localComponets/Header";
+import Members from "./localComponets/Members";
 
 export default function Team() {
 
   return (
     <Container>
       <NavBar highlightedTab={"Team"} />
+      <Header/>
+      <Members/>
       <ContactUs/>
     </Container>
   );
