@@ -1,11 +1,20 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function ContactUs(){
   return (
       <Container>
         <h1>Contact us</h1>
-
+          <div className="icons">
+            <a href="mailto: jmartinsr@pm.me" target="_blank" rel='noreferrer'>
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>  
+            <a href="https://www.linkedin.com/company/ownershipmatters/" target="_blank" rel='noreferrer'>
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>  
+            <a href="https://www.instagram.com/coopchoice/" target="_blank" rel='noreferrer'>
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </div> 
         <h5>© 2023 A PROJECT OF SOLIDARITY HALL, 501(C)3</h5>
       </Container>
     );
@@ -29,6 +38,17 @@ const Container = styled.div`
     font-family: "Work Sans";
     color: #f7f3f2;
     font-size: 25px;
-    margin-top: 60px;
+    margin-top: 30px;
+  }
+  .icons{
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+  }
+  ion-icon{
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+    cursor: pointer;
   }
 `;
