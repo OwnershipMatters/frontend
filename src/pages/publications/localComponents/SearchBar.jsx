@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import image from "./../localAssets/lupa.png";
+
 export default function SearchBar(){
     return(
         <Container>
+            <img src={image} alt="search"/>
             <input
 
             />
@@ -18,6 +21,12 @@ const Container = styled.div`
     background-color: black;
     margin-top: 50px;
     position: relative;
+    img{
+        height: 55px;
+        position: absolute;
+        top: 24px;
+        left: 27px;
+    }
     input{
         position: absolute;
         top: 51px;
@@ -27,7 +36,7 @@ const Container = styled.div`
         border: none;
         border-bottom: 2px solid white;
         color: white;
-        font-size: 15px;
+        font-size: 20px;
         padding-bottom: 5px;
     }
     input:focus{
