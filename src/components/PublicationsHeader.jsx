@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Header(){
+export default function PublicationsHeader(){
     return(
         <Container>
             <h1>MOSAIC VISION</h1>

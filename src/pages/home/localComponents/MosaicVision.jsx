@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import TextBox from "../../../components/TextBox"
 
@@ -7,7 +8,9 @@ export default function MosaicVision(){
         <Container>
             <h1>Mosaic Vision</h1>
             <div className="preview-texts">
-                <TextBox/>
+                <Link to={`/article/0`}>
+                    <TextBox/>
+                </Link>
                 <TextBox/>
                 <TextBox/>
                 <TextBox/>

@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Publications from "./pages/publications";
 import Services from "./pages/services";
 import Team from "./pages/team";
+import Article from "./pages/article";
 
 export const Router = () => {
   return (
@@ -17,6 +18,7 @@ export const Router = () => {
         <Route path="/publications" element={<Publications />} />
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/article/:id" element={<Article />} />
       </Routes>
       <GlobalStyles />
     </BrowserRouter>

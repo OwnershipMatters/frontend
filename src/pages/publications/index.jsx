@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ContactUs from "../../components/ContactUs";
 import NavBar from "../../components/Navbar";
 import ShareYourVision from "./../../components/ShareYourVision";
-import Header from "./localComponents/Header";
+import PublicationsHeader from "../../components/PublicationsHeader";
 import PublicationsDisplay from "./localComponents/PublicationsDisplay";
 import SearchBar from "./localComponents/SearchBar";
 
@@ -12,7 +12,7 @@ export default function Publications() {
   return (
     <Container>
       <NavBar highlightedTab={"Publications"} />
-      <Header/>
+      <PublicationsHeader/>
       <SearchBar/>
       <PublicationsDisplay/>
       <ShareYourVision/>
@@ -30,3 +30,4 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
