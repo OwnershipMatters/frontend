@@ -54,6 +54,9 @@ const Left = styled.div`
     top: 158px;
     left: 116px;
   }
+  @media (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 const Button = styled.button`
@@ -105,5 +108,14 @@ const Right = styled.div`
     width: 635px;
     font-weight: 400;
     font-family: var(--secondary-font);
+  }
+  @media (max-width: 1280px) {
+    width: 350px;
+    padding: 0 5px;
+  }
+  h2{
+    max-width: 350px;
+    font-size: 20px;
+    display: block;
   }
 `;

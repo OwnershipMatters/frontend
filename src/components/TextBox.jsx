@@ -50,6 +50,22 @@ const Container = styled.div`
             font-weight: 400;
         }
     }
+    @media (max-width: 1280px) {
+        width: 300px;
+        height: 150px;
+        .left{
+            height: 150px;
+        }
+        .right{
+            padding: 5px;
+            h1{
+            font-size: 15px;
+            }
+            h2{
+            font-size: 12px;
+            }
+        } 
+    }
 `
 const Image = styled.div`
     width: 273px;
@@ -57,4 +73,8 @@ const Image = styled.div`
     background: url(${(props) => props.image});
     background-size: cover;
     background-position: 0;
+    @media (max-width: 1280px) {
+        width: 120px;
+        height: 120px;
+    }
 `

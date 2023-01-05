@@ -51,4 +51,18 @@ const Container = styled.div`
     font-size: 80px;
     cursor: pointer;
   }
+  @media (max-width: 1280px) {
+    h1{
+      font-size: 30px;
+    }
+    h5{
+      font-size: 12px;
+    }
+    .icons{
+      padding: 0 40px;
+    }
+    ion-icon{
+      font-size: 50px;
+    }
+  }
 `;

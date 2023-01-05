@@ -38,6 +38,12 @@ const Container = styled.div`
         justify-content: space-around;
         align-items: center;
     }
+    @media (max-width: 1280px) {
+      width: 360px;
+      .buttons{
+        padding-left: 10px;
+      }
+    }
 `
 
 const Logo = styled.div`
@@ -45,6 +51,10 @@ const Logo = styled.div`
   width: 295px;
   background: url(${(props) => props.image});
   background-size: cover;
+  @media (max-width: 1280px) {
+    width: 81px;
+    height: 80px;
+  }
 `;
 
 const Tab = styled.div`
@@ -64,6 +74,13 @@ const Tab = styled.div`
     transition: 0.5s;
     :hover {
       color: var(--theme-color);
+    }
+  }
+  @media (max-width: 1280px) {
+    width: 52px;
+    height: 29px;
+    h2{
+      font-size: 10px;
     }
   }
 `;

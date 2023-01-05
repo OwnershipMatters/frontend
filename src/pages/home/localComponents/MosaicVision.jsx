@@ -33,4 +33,16 @@ const Container = styled.div`
         column-gap: 45px;
         row-gap: 45px;
     }
-`
+    @media (max-width: 1280px) {
+        width: 360px;
+        h1{
+            font-size: 40px;
+            text-align: center;
+        }
+        .preview-texts{
+            display: flex;
+            justify-content: center;
+            row-gap: 20px;
+        }
+    }
+`   
