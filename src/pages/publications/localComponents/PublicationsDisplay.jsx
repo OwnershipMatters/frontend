@@ -1,20 +1,23 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import TextBox from "./../../../components/TextBox";
 
-export default function PublicationsDisplay(){
+export default function PublicationsDisplay({posts}){
     return(
         <Container>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
+            {
+                posts 
+                ?
+                posts.map((post, index)=> (
+                        <Link key={index} to={`/article/${post.id}`}>
+                            <TextBox post={post}/>
+                        </Link>
+                ))
+                :
+                <h1>Loading</h1>
+            }
+            
         </Container>
     )
 };

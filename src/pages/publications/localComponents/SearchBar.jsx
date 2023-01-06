@@ -1,13 +1,33 @@
 import styled from "styled-components";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 import image from "./../localAssets/lupa.png";
+import URL from "../../../URL";
 
-export default function SearchBar(){
+export default function SearchBar({setPosts}){
+
+    const [search, setSearch] = useState("");
+
+    function searchProducts(){
+        axios.post(URL+"/search", {search})
+            .then(res => {
+                setPosts(res.data);
+            })
+            .catch(err => console.log(err));
+    }
+
+    useEffect(() => {
+        searchProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [search]);
+    
     return(
         <Container>
             <img src={image} alt="search"/>
             <input
-
+                onChange={(e) => setSearch(e.target.value)}
+                value={search}
             />
             <h1>Archive Search</h1>
         </Container>
