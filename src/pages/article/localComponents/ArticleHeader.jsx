@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import dayjs from "dayjs";
 
-export default function ArticleHeader(){
+export default function ArticleHeader({post}){
     return (
         <Container>
-            <Image/>
+            <Image post={post}/>
             <div className="info">
-                <h1>Categoria</h1>
-                <h2>Defiant Geographies: Race and Urban Space in 1920s Rio de Janeiro by Lorraine Leu</h2>
-                <h3>Autor</h3>
-                <h3>Data</h3>
+                <h1>{post.category}</h1>
+                <h2>{post.title}</h2>
+                <h3>{post.author}</h3>
+                <h3>{dayjs(post.date).format("DD MMMM YYYY")}</h3>
             </div>
         </Container>
     )
@@ -39,6 +40,6 @@ const Container = styled.div`
 const Image = styled.div`
     width: 329px;
     height: 437px;
-    background: url(${(props) => props.image});
+    background: url(${(props) => props.post.image});
     background-size: cover;
 `

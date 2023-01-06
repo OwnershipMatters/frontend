@@ -1,18 +1,45 @@
 import styled from "styled-components";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import NavBar from "../../components/Navbar";
 import PublicationsHeader from "../../components/PublicationsHeader";
 import ArticleHeader from "./localComponents/ArticleHeader";
 import ContactUs from "../../components/ContactUs";
 import ArticleBody from "./localComponents/ArticleBody";
+import URL from "../../URL";
 
 export default function Article(){
+
+    const [post, setPost] = useState();
+    const { id } = useParams();
+
+    useEffect(()=>{
+        const promise = axios.get(`${URL}/post/${id}`);
+        promise.then(res => {
+            setPost(res.data);
+        })
+        promise.catch(err => {
+            console.log(err);
+        })
+
+    },[id]);
+
     return(
         <Container>
             <NavBar/>
             <PublicationsHeader/>
-            <ArticleHeader/>
-            <ArticleBody/>
+            {
+                post?
+                    <>
+                        <ArticleHeader post={post}/>
+                        <ArticleBody post={post}/>
+                    </>
+                :
+                    <h1>Loading</h1>
+            }
+            
             <ContactUs/>
         </Container>
     )
