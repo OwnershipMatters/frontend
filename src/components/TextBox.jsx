@@ -1,21 +1,16 @@
 import styled from "styled-components";
+import dayjs from "dayjs";
 
-export default function TextBox(){
-    const props = {
-        date: "8 January 2023",
-        title: "Como a Julia pode ser tao chata?",
-        author: "Manuel H. M. Rodrigues",
-        image:"https://imgs.search.brave.com/oKy2tYasEFDgqb4wcbHyfmzchb7jio91wmrGsN7rxos/rs:fit:1100:625:1/g:ce/aHR0cHM6Ly8zLmJw/LmJsb2dzcG90LmNv/bS8tSS10ZVREOGlQ/NWsvVnhaNEtMYnNK/R0kvQUFBQUFBQUFK/ekUvRWxGMDJ1WmZo/X1E2ZGVLSmJwUnZu/VWRJYVlCOXdGRmJB/Q0xjQi9zMTYwMC9j/YWxvcHNpdGEuanBn"  
-        }
+export default function TextBox({post}){
     return(
         <Container>
             <div className="left">
-                <Image image={props.image}/>
+                <Image image={post.image}/>
             </div>
             <div className="right">
-                <h2>{props.date}</h2>
-                <h1>{props.title}</h1>
-                <h2>{props.author}</h2>
+                <h2>{dayjs(post.date).format("DD MMMM YYYY")}</h2>
+                <h1>{post.title}</h1>
+                <h2>{post.author}</h2>
             </div>
         </Container>
     )
@@ -39,6 +34,7 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: space-around;
         padding: 20px;
+        text-align: left;
         h1{
             font-family: "Playful Display";
             font-size: 28px;

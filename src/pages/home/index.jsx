@@ -1,20 +1,40 @@
 import styled from "styled-components";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import ContactUs from "../../components/ContactUs";
 import NavBar from "../../components/Navbar";
-
 import GetToKnow from "./localComponents/GetToKnow";
 import MosaicVision from "./localComponents/MosaicVision";
 import Mural from "./localComponents/Mural";
 import ShareYourVision from "./../../components/ShareYourVision";
 
+import URL from "./../../URL"
+
 export default function Home() {
+
+  const [posts, setPosts] = useState();
+  useEffect(()=>{
+    const promise = axios.get(URL+"/last4posts")
+    promise.then(res => {
+      setPosts(res.data)
+    promise.catch(err => {
+      console.log(err)
+    });  
+    })
+  },[])
 
   return (
     <Container>
       <NavBar highlightedTab={"Home"} />
       <Mural/>
       <GetToKnow/>
-      <MosaicVision/>
+      {
+        posts?
+          <MosaicVision posts={posts}/>
+        :
+          <h1>Loading</h1>
+      }
       <ShareYourVision/>
       <ContactUs/>
     </Container>

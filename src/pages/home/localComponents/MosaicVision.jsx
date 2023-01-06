@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 
 import TextBox from "../../../components/TextBox"
 
-export default function MosaicVision(){
+export default function MosaicVision({posts}){
     return(
         <Container>
             <h1>Mosaic Vision</h1>
             <div className="preview-texts">
-                <Link to={`/article/0`}>
-                    <TextBox/>
-                </Link>
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
+                {
+                    posts.map((post, index)=> (
+                        <Link key={index} to={`/article/${post.id}`}>
+                            <TextBox post={post}/>
+                        </Link>
+                    ))
+                }
             </div>
         </Container>
     )
