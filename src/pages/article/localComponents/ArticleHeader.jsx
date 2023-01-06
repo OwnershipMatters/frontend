@@ -20,6 +20,11 @@ const Container = styled.div`
     display: flex;
     column-gap: 24px;
     margin-top: 60px;
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     h1{
         font-family: "Playfair Display";
         font-size: 55px;
