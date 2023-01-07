@@ -51,6 +51,7 @@ export default function Mural() {
     max-width: 1280px;
     background-color: #f5f5f5;
     h1 {
+      margin: 30px 0;
       font-size: 80px;
       font-weight: 400;
       font-family: "Playfair Display";

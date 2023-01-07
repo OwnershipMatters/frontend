@@ -13,7 +13,7 @@ export default function ArticleBody({post}){
 
 const Container = styled.div`
     width: 1280px;
-    padding: 50px;
+    padding: 0 50px 50px 50px;
     h1{
         font-family: "Playfair Display";
         font-weight: 400;

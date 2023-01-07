@@ -9,6 +9,7 @@ import ArticleHeader from "./localComponents/ArticleHeader";
 import ContactUs from "../../components/ContactUs";
 import ArticleBody from "./localComponents/ArticleBody";
 import URL from "../../URL";
+import image from "./localAssets/eyes.png";
 
 export default function Article(){
 
@@ -30,6 +31,7 @@ export default function Article(){
         <Container>
             <NavBar/>
             <PublicationsHeader/>
+            <img src={image} alt="Picasso eyes"/>
             {
                 post?
                     <>
@@ -53,4 +55,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    img{
+        width: 1280px;
+        margin: 50px 0
+    }
 `

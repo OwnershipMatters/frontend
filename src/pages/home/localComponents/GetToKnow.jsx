@@ -41,7 +41,7 @@ const ContentWrapper = styled.div`
 
 const Left = styled.div`
   width: 640px;
-  height: 566px;
+  height: 650px;
   background-color: black;
   position: relative;
   padding: 100px;
@@ -86,7 +86,7 @@ const Button = styled.button`
 
 const Right = styled.div`
   box-sizing: border-box;
-  padding: 20px 130px 20px 40px;
+  padding: 20px 130px 0px 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -100,22 +100,23 @@ const Right = styled.div`
     font-size: 28px;
   }
   h2 {
-   
-    font-family: 'Nixie One', cursive;
+    font-family: 'Nixie One';
     text-align: justify;
     font-size: 28px;
-    max-width: 635px;
-    width: 635px;
+    max-width: 620px;
+    width: 620px;
     font-weight: 400;
+    box-sizing: border-box;
     font-family: var(--secondary-font);
+    height: 550px;
   }
   @media (max-width: 1280px) {
     width: 350px;
     padding: 0 5px;
-  }
-  h2{
-    max-width: 350px;
-    font-size: 20px;
-    display: block;
+    h2{
+      max-width: 350px;
+      font-size: 20px;
+      display: block;
+    }
   }
 `;

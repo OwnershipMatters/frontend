@@ -36,7 +36,7 @@ const Container = styled.div`
     }
     .middle{
         margin-top: -4px;
-        height: 1050px;
+        height: 900px;
         display: flex;
     }
     .left{
@@ -47,7 +47,7 @@ const Container = styled.div`
             font-weight: 700;
             font-size: 60px;
             color: white;
-            margin-top: 75px;
+            margin-top: 80px;
             margin-left: 54px;
         }
     }
@@ -55,17 +55,20 @@ const Container = styled.div`
         width: 871px;
         background-color: var(--theme-color);
         padding: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h2{
             font-family: "Work Sans";
             font-weight: 400;
-            font-size: 35px;
+            font-size: 30px;
             color: white;
-            text-align: justify;
+            text-align: left;
         }
         span{
             color: white;
             font-weight: 700;
-            font-size: 35px;
+            font-size: 30px;
         }
         ul{
             list-style: disc;

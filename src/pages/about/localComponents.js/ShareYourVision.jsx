@@ -19,7 +19,7 @@ const Container = styled.div`
     display: flex;
     margin: 80px 0;
     img{
-        height: 600px;
+        height: 500px;
     }
     h1{
         font-family: "Playfair Display";

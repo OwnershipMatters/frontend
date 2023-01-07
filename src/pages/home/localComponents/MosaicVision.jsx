@@ -21,18 +21,20 @@ export default function MosaicVision({posts}){
 };
 
 const Container = styled.div`
-    width: 1150px;
+    width: 1280px;
     margin-top: 46px;
     h1{
         font-family: "Work Sans";
         font-weight: 400;
         font-size: 60px;
+        margin-bottom: 30px;
     }
     .preview-texts{
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
-        column-gap: 45px;
-        row-gap: 45px;
+        column-gap: 20px;
+        row-gap: 20px;
     }
     @media (max-width: 1280px) {
         width: 360px;

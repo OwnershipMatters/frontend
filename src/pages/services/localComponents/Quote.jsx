@@ -19,8 +19,8 @@ const Container = styled.div`
     display: flex;
     background-color: #D9D9D9;
     align-items: center;
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 10px 20px;
+    margin: 50px 0;
     h1{
         font-family: "Playfair Display";
         font-weight: 700;
@@ -31,7 +31,7 @@ const Container = styled.div`
         font-family: "Playfair Display";
         font-weight: 400;
         font-size: 30px;
-        margin-left: 20px;
+        margin-left: 30px;
         text-align: justify;
     }
 `

@@ -15,6 +15,7 @@ export default function AnOpenInvitation(){
 const Container = styled.div`
     width: 1280px;
     background-color:#D9D9D9;
+    padding-top: 30px;
     h1{
         text-align: center;
         font-family: "Playfair Display";
@@ -23,13 +24,13 @@ const Container = styled.div`
         font-size: 90px;
     }
     h2{
-        margin-top: 60px;
+        margin-top: 30px;
         margin-left: 60px;
         margin-right: 60px;
         text-align: justify;
         font-family: "Work Sans";
         font-weight: 400;
-        font-size: 40px;
+        font-size: 30px;
         span{
             font-weight: 700;
         }

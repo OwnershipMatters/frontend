@@ -17,8 +17,8 @@ export default function TextBox({post}){
 };
 
 const Container = styled.div`
-    width: 538px;
-    height: 308px;
+    width: 580px;
+    height: 350px;
     background-color: #D9D9D9;
     display: flex;
     :hover{

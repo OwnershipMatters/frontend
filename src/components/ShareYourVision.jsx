@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export default function ShareYourVision(){
@@ -5,9 +6,11 @@ export default function ShareYourVision(){
         <Container>
             <h1>Share Your Vision</h1>
             <h2>Our team will provide the editorial <br/> guidance you need to publish your story</h2>
-            <Button>
-                <h3>More info</h3>
-            </Button>
+            <Link to="/services">
+                <Button>
+                    <h3>More info</h3>
+                </Button>
+            </Link>
         </Container>
     )
 };
@@ -18,6 +21,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
     h1{
         font-size: 50px;
         font-weight: 700;
