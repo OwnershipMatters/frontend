@@ -27,7 +27,7 @@ const Container = styled.div`
     .left{
         display: flex;
         align-items: center;
-        height: 308px;
+        height: 350px;
     }
     .right{
         display: flex;
@@ -65,7 +65,7 @@ const Container = styled.div`
 `
 const Image = styled.div`
     width: 273px;
-    height: 277px;
+    height: 350px;
     background: url(${(props) => props.image});
     background-size: cover;
     background-position: 0;
