@@ -10,8 +10,11 @@ export default function Header(){
 }
 
 const Container = styled.div`
-    width: 1280px;
+    width: 1095px;
     margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h1{
         font-family: "Playfair Display";
         font-style: 700;
@@ -20,12 +23,13 @@ const Container = styled.div`
     }
     h2{
         margin-top: 10px;
-        font-family: "Work Sans";
+        font-family: "Inter";
         font-weight: 400;
-        font-size: 35px;
-        text-align: center;
+        font-size: 25px;
+        text-align: justify;
     }
     span{
         color: var(--theme-color);
+        font-family: "Inter";
     }
 `

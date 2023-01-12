@@ -29,14 +29,14 @@ export default function OurMultiverse(){
 
 const Container = styled.div`
     width: 1280px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: -4px;
     img{
         width: 1280px;
     }
     .middle{
         margin-top: -4px;
-        height: 900px;
+        height: 700px;
         display: flex;
     }
     .left{
@@ -59,16 +59,17 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         h2{
-            font-family: "Work Sans";
+            font-family: "Inter";
             font-weight: 400;
-            font-size: 30px;
+            font-size: 25px;
             color: white;
             text-align: left;
         }
         span{
+            font-family: "Inter";
             color: white;
             font-weight: 700;
-            font-size: 30px;
+            font-size: 25px;
         }
         ul{
             list-style: disc;

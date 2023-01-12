@@ -11,7 +11,10 @@ export default function ServiceList(){
 };
 
 const Container = styled.div`
-    width: 1280px;
+    width: 980px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
     img{
         width: 1280px;
     }

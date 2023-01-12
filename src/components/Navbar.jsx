@@ -47,8 +47,8 @@ const Container = styled.div`
 `
 
 const Logo = styled.div`
-  height: 287px;
-  width: 295px;
+  height: 250px;
+  width: 250px;
   background: url(${(props) => props.image});
   background-size: cover;
   @media (max-width: 1280px) {

@@ -15,22 +15,23 @@ export default function ShareYourVision(){
 }
 
 const Container = styled.div`
-    width: 1280px;
+    width: 1050px;
     display: flex;
-    margin: 80px 0;
+    margin: 55px 0 35px 0;
+    align-items: center;
     img{
-        height: 500px;
+        height: 240px;
     }
     h1{
         font-family: "Playfair Display";
         text-align: center;
         font-style: Bold;
-        font-size: 60px;
+        font-size: 45px;
     }
     h2{
-        font-family: "Work Sans";
+        font-family: "Inter";
         font-weight: 400;
-        font-size: 35px;
+        font-size: 25px;
         text-align: justify;
         padding: 60px;
         span{

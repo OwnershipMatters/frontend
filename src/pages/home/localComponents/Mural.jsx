@@ -25,7 +25,7 @@ export default function Mural() {
   const Container = styled.div`
     width: 100%;
     display: flex;
-    margin-top: 53px;
+    margin-top: 35px;
     margin-bottom: 38px;
     flex-direction: column;
     .paintings{
@@ -51,7 +51,7 @@ export default function Mural() {
     max-width: 1280px;
     background-color: #f5f5f5;
     h1 {
-      margin: 30px 0;
+      margin: 15px 0;
       font-size: 80px;
       font-weight: 400;
       font-family: "Playfair Display";

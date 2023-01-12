@@ -10,14 +10,14 @@ export default function TextBox({post}){
             <div className="right">
                 <h2>{dayjs(post.date).format("DD MMMM YYYY")}</h2>
                 <h1>{post.title}</h1>
-                <h2>{post.author}</h2>
+                <h2>BY {post.author}</h2>
             </div>
         </Container>
     )
 };
 
 const Container = styled.div`
-    width: 580px;
+    width: 600px;
     height: 350px;
     background-color: #D9D9D9;
     display: flex;

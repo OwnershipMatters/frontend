@@ -31,10 +31,10 @@ const Container = styled.div`
     }
     .preview-texts{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
         column-gap: 20px;
-        row-gap: 20px;
+        row-gap: 85px;
     }
     @media (max-width: 1280px) {
         width: 360px;

@@ -18,9 +18,10 @@ const Container = styled.div`
     width: 1280px;
     margin-top: 80px;
     display: flex;
+    justify-content: center;
     img{
         width: 653px;
-        height:728px;
+        height: 600px;
     }
     .right{
         padding: 0 50px 50px 50px;
@@ -32,9 +33,11 @@ const Container = styled.div`
         font-size: 60px;
     }
     h2{
-        margin-top: 20px;
-        font-family: "Work Sans";
+        margin-top: 50px;
+        font-family: "Inter";
         font-weight: 400;
-        font-size: 35px;
+        font-size: 25px;
+        width: 500px;
+        text-align: left;
     }
 `

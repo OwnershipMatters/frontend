@@ -35,7 +35,7 @@ export default function SearchBar({setPosts}){
 };
 
 const Container = styled.div`
-    width: 1128px;
+    width: 1280px;
     height: 160px;
     display: flex;
     background-color: black;
