@@ -26,4 +26,11 @@ const Container = styled.div`
         font-weight: 400;
         font-size: 50px;
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        h1{
+            font-size: 50px;
+            text-align: center;
+        }
+    }
 `

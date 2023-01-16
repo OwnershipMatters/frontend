@@ -32,4 +32,15 @@ const Container = styled.div`
         color: var(--theme-color);
         font-family: "Inter";
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        margin-top: 15px;
+        h1{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 15px;
+            width: 355px;
+        }
+    }
 `

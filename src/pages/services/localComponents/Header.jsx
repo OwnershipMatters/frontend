@@ -40,4 +40,25 @@ const Container = styled.div`
         width: 500px;
         text-align: left;
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        flex-direction: column;
+        img{
+            width: 325px;
+            height: 300px;
+        }
+        .right{
+            padding: 0;
+            h1{
+                font-size: 35px;
+                text-align: center;
+            }
+            h2{
+                margin-top: 10px;
+                font-size: 20px;
+                text-align: justify;
+                width: 360px;
+            }
+        }
+    }
 `

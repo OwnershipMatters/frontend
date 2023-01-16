@@ -81,4 +81,27 @@ const Container = styled.div`
             color: white;
         }
     }   
+    @media (max-width: 1280px) {
+        width: 360px;
+        margin-top: 15px;
+        img{
+            width: 360px;
+        }
+        .middle{
+            flex-direction: column;
+            height: auto;
+        }
+        .left{
+            width: 360px;
+            h1{
+                margin: 5px;
+                font-size: 50px;
+            }
+        }
+        .right{
+            width: 360px;
+            padding: 15px;
+            font-size: 15px;
+        }
+    }
 `

@@ -34,4 +34,17 @@ const Container = styled.div`
         margin-left: 30px;
         text-align: justify;
     }
+    @media (max-width: 1280px) {
+        flex-direction: column;
+        width: 360px;
+        height: auto;
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            margin-left: 5px;
+            font-size: 25px;
+        }
+        
+    }
 `

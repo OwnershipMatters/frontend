@@ -43,5 +43,18 @@ const Container = styled.div`
         font-size: 25px;
 
     }
-    
+    @media (max-width: 1280px) {
+        width: 360px;
+        padding: 30px 5px;
+        h1{
+            font-size: 35px;
+        }
+        h2{
+            font-size: 18px;
+            margin: 25px 5px;
+        }
+        h3{
+            margin: 15px;
+        }
+    }
 `

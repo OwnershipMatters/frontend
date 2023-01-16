@@ -38,4 +38,17 @@ const Container = styled.div`
             font-weight: 700;
         }
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        flex-direction: column;
+        img{
+            width: 300px;
+        }
+        h1{
+
+        }
+        h2{
+            padding: 5px;
+        }
+    }
 `

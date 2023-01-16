@@ -51,5 +51,6 @@ const Container = styled.div`
   align-items: center;
   @media (max-width: 1280px) {
     width: 360px;
+    max-width: 360px;
   }
 `;
