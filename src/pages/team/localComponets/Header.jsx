@@ -30,4 +30,15 @@ const Container = styled.div`
             font-family: "Work Sans";
         }
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        margin-top: 15px;
+        img{
+            width: 360px;
+        }
+        h2{
+            margin: 10px 5px;
+            font-size: 20px;
+        }
+    }
 `;

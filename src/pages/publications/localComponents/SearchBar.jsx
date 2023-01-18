@@ -78,4 +78,19 @@ const Container = styled.div`
         left: 92px;
         font-weight: 400;
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        margin-top: 20px;
+        img{
+            top: 50px;
+            height: 30px;
+        }
+        input{
+            left: 70px;
+            width: 250px;
+        }
+        h1{
+            left: 70px;
+        }
+    }
 `

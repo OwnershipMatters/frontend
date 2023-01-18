@@ -21,16 +21,24 @@ const Container = styled.div`
         position: absolute;
         top: 329px;
         left: 150px;
+        width: 220px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     h1{
         font-family: "Playfair Display";
         font-weight: 700;
-        font-size: 28px;
+        font-size: 27px;
+        width: 205px;
     }
     h2{
         font-family: "Nixie One";
         font-weight: 400;
-        font-size: 25px;
+        font-size: 20px;
+        width: 205px;
     }
 `
 
@@ -39,4 +47,7 @@ const Image = styled.div`
     background-size: cover;
     width: 347px;
     height:345px;
+    @media (max-width: 1280px) {
+        width: 360px;
+    }
 `

@@ -16,7 +16,7 @@ export default function Publications() {
   const [posts, setPosts] = useState();
 
   useEffect(()=>{
-    const promise = axios.get(URL+"/posts");
+    const promise = axios.get(URL+"/lastposts/12");
     promise.then(res=>{
       setPosts(res.data)
     })

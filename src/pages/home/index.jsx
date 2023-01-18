@@ -15,7 +15,7 @@ export default function Home() {
 
   const [posts, setPosts] = useState();
   useEffect(()=>{
-    const promise = axios.get(URL+"/last4posts")
+    const promise = axios.get(URL+"/lastposts/4")
     promise.then(res => {
       setPosts(res.data)
     promise.catch(err => {

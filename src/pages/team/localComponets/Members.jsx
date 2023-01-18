@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 import MemberBox from "./MemberBox";
+import teamData from "../localAssets/teamData";
 
 export default function Members(){
     return(
         <Container>
-            <MemberBox image="https://imgs.search.brave.com/g5fdHtoNtKdfqjBYBg-_2Rl9BV7BTeJ6gidjF9_Y7og/rs:fit:712:922:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg5Lzlh/LzQ3Lzg5OWE0N2Vj/YzMwNjRlMmNkNDUw/MmUyZmU3YmFhNGQy/LmpwZw" name="Manuel Rodrigues" role="Fullstack"/>
-            <MemberBox image="https://imgs.search.brave.com/g5fdHtoNtKdfqjBYBg-_2Rl9BV7BTeJ6gidjF9_Y7og/rs:fit:712:922:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg5Lzlh/LzQ3Lzg5OWE0N2Vj/YzMwNjRlMmNkNDUw/MmUyZmU3YmFhNGQy/LmpwZw" name="Manuel Rodrigues" role="Fullstack"/>
-            <MemberBox image="https://imgs.search.brave.com/g5fdHtoNtKdfqjBYBg-_2Rl9BV7BTeJ6gidjF9_Y7og/rs:fit:712:922:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg5Lzlh/LzQ3Lzg5OWE0N2Vj/YzMwNjRlMmNkNDUw/MmUyZmU3YmFhNGQy/LmpwZw" name="Manuel Rodrigues" role="Fullstack"/>
-            <MemberBox image="https://imgs.search.brave.com/g5fdHtoNtKdfqjBYBg-_2Rl9BV7BTeJ6gidjF9_Y7og/rs:fit:712:922:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg5Lzlh/LzQ3Lzg5OWE0N2Vj/YzMwNjRlMmNkNDUw/MmUyZmU3YmFhNGQy/LmpwZw" name="Manuel Rodrigues" role="Fullstack"/>
+            {
+                teamData.map((colab, index)=> (
+                    <MemberBox key={index} image={colab.image} name={colab.name} role={colab.role}/>
+                ))
+            }  
         </Container>
     )
 };
@@ -20,4 +22,7 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media (max-width: 1280px) {
+        width: 360px;
+    }
 `;
