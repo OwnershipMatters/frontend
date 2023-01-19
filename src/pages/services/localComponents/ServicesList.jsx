@@ -29,8 +29,8 @@ const Container = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 50px;
-    column-gap: 50px;
-    row-gap: 50px;
+    column-gap: 60px;
+    row-gap: 100px;
     img{
         width: 280px;
     }

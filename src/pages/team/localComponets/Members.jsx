@@ -21,7 +21,8 @@ const Container = styled.div`
     background-color: #D9D9D9;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    row-gap: 50px;
     @media (max-width: 1280px) {
         width: 360px;
     }

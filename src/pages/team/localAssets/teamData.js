@@ -13,9 +13,10 @@ import image12 from "./image12.png";
 
 const teamData = [
     {image: image1, name: "Elias Crim", role: "Founder & Senior Editor"},
-    {image: image2, name: "Júlia Martins", role: "Executive Director & Editor-in-Chief"},
+    {image: image2, name: "Júlia Martins", role: "Executive Director"},
     {image: image3, name: "Joshua Richard", role: "Editor"},
     {image: image4, name: "Nathan Schneider", role: "Advisor"},
+    {image: image12, name: "Leonardo Corrêa", role: "Contributing Editor"},
     {image: image5, name: "Laura Granja", role: "Contributing Author"},
     {image: image6, name: "John Restakis", role: "Contributing Author"},
     {image: image7, name: "Kevon Paynter", role: "Contributing Author"},
@@ -23,7 +24,7 @@ const teamData = [
     {image: image9, name: "Daniel Fireside", role: "Contributing Author"},
     {image: image10, name: "Matthew Epperson", role: "Contributing Author"},
     {image: image11, name: "Manuel Rodrigues", role: "Web Developer"},
-    {image: image12, name: "Leonardo Corrêa", role: "Contributing Author"},
+    
 ]
 
 export default teamData;

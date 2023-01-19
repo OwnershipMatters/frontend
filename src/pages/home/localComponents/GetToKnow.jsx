@@ -117,6 +117,7 @@ const Right = styled.div`
       max-width: 350px;
       font-size: 20px;
       display: block;
+      height: auto;
     }
   }
 `;

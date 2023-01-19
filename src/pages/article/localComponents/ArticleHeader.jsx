@@ -19,7 +19,7 @@ const Container = styled.div`
     width: 1280px;
     display: flex;
     column-gap: 24px;
-    margin-top: 60px;
+    padding: 60px 50px 0 50px;
     .info{
         display: flex;
         flex-direction: column;
@@ -41,10 +41,32 @@ const Container = styled.div`
         font-size: 30px;
         font-weight: 400;
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        margin-top: 15px;
+        flex-direction: column-reverse;
+        h1{
+            font-size: 20px;
+        }
+        h2{
+            font-size: 25px;
+            margin-top: 15px;
+        }
+        h3{
+            margin-top: 15px;
+            font-size: 20px;
+        }
+    }
 `
 const Image = styled.div`
     width: 329px;
     height: 437px;
     background: url(${(props) => props.post.image});
     background-size: cover;
+    background-position: -80px;
+    @media (max-width: 1280px) {
+        margin-top: 15px;
+        width: 360px;
+        background-position: -80px;
+    }
 `

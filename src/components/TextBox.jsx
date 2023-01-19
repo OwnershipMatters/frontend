@@ -10,7 +10,7 @@ export default function TextBox({post}){
             <div className="right">
                 <h2>{dayjs(post.date).format("DD MMMM YYYY")}</h2>
                 <h1>{post.title}</h1>
-                <h2>BY {post.author}</h2>
+                <h2>{post.author}</h2>
             </div>
         </Container>
     )
@@ -68,9 +68,9 @@ const Image = styled.div`
     height: 350px;
     background: url(${(props) => props.image});
     background-size: cover;
-    background-position: 0;
+    background-position: -40px;
     @media (max-width: 1280px) {
         width: 120px;
-        height: 120px;
+        height: 150px;
     }
 `

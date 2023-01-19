@@ -7,6 +7,7 @@ import Publications from "./pages/publications";
 import Services from "./pages/services";
 import Team from "./pages/team";
 import Article from "./pages/article";
+import Panel from "./pages/panel";
 
 export const Router = () => {
   return (
@@ -19,6 +20,7 @@ export const Router = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
         <Route path="/article/:id" element={<Article />} />
+        <Route path="/panel" element={< Panel/>}/>
       </Routes>
       <GlobalStyles />
     </BrowserRouter>

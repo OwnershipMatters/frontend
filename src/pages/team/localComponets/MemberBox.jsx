@@ -13,15 +13,11 @@ export default function MemberBox({image, name, role}){
 };
 
 const Container = styled.div`
-    width: 405px;
+    width: 347px;
     height: 449px;
-    position: relative;
     .box{
         background-color: white;
-        position: absolute;
-        top: 329px;
-        left: 150px;
-        width: 220px;
+        width: 347px;
         height: 100px;
         display: flex;
         flex-direction: column;
@@ -32,13 +28,11 @@ const Container = styled.div`
         font-family: "Playfair Display";
         font-weight: 700;
         font-size: 27px;
-        width: 205px;
     }
     h2{
         font-family: "Nixie One";
         font-weight: 400;
         font-size: 20px;
-        width: 205px;
     }
 `
 

@@ -59,4 +59,11 @@ const Container = styled.div`
         width: 1280px;
         margin: 50px 0
     }
+    @media (max-width: 1280px) {
+        width: 360px;
+        img{
+            width: 360px;
+            margin: 15px 0;
+        }
+    }
 `
