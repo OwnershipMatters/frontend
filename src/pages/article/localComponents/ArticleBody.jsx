@@ -5,7 +5,7 @@ export default function ArticleBody({post}){
     return (
         <Container>
             {paragraphs.map((paragraph, index) => (
-                <h1 key={index}>{paragraph}</h1>
+                <h1 key={`${index}+ 'paragraph'`} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
         </Container>
     )
@@ -20,6 +20,14 @@ const Container = styled.div`
         font-size: 35px;
         text-align: justify;
         margin-bottom: 30px;
+    }
+    a:link{
+        color: blue;
+        text-decoration: underline;
+    }
+    a:visited{
+        color: purple;
+        text-decoration: underline;
     }
     @media (max-width: 1280px) {
         width: 360px;

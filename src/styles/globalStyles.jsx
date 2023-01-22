@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
     :root {
-
+        zoom: 80%;
         /* COLORS */
         --theme-color: #933D1B;
         --background-color: none;

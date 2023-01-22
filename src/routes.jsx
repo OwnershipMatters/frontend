@@ -8,6 +8,9 @@ import Services from "./pages/services";
 import Team from "./pages/team";
 import Article from "./pages/article";
 import Panel from "./pages/panel";
+import Login from "./pages/panel/Login";
+import PostArticle from "./pages/panel/PostArticle";
+import EmailService from "./pages/panel/EmailService";
 
 export const Router = () => {
   return (
@@ -21,6 +24,9 @@ export const Router = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/panel" element={< Panel/>}/>
+        <Route path="/panel/login" element={<Login/>} />
+        <Route path="/panel/post" element={<PostArticle/>} />
+        <Route path="/panel/email" element={<EmailService/>} />
       </Routes>
       <GlobalStyles />
     </BrowserRouter>

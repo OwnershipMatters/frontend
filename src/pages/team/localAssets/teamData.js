@@ -10,6 +10,8 @@ import image9 from "./image9.png";
 import image10 from "./image10.png";
 import image11 from "./image11.png";
 import image12 from "./image12.png";
+import image13 from "./image13.jpg";
+import image14 from "./image14.jpeg";
 
 const teamData = [
     {image: image1, name: "Elias Crim", role: "Founder & Senior Editor"},
@@ -24,6 +26,8 @@ const teamData = [
     {image: image9, name: "Daniel Fireside", role: "Contributing Author"},
     {image: image10, name: "Matthew Epperson", role: "Contributing Author"},
     {image: image11, name: "Manuel Rodrigues", role: "Web Developer"},
+    {image: image13, name: "Caio Pedras", role: "Web Developer"},
+    {image: image14, name: "Erick Mokdeci", role: "Web Developer"}
     
 ]
 

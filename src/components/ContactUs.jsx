@@ -37,7 +37,7 @@ const Container = styled.div`
   h5{
     font-family: "Work Sans";
     color: #f7f3f2;
-    font-size: 25px;
+    font-size: 15px;
     margin-top: 30px;
   }
   .icons{
