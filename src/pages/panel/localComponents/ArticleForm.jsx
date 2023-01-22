@@ -11,12 +11,18 @@ export default function ArticleForm({post, setPost}){
 
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
+    const token = localStorage.getItem('token');
 
-    function postSignIn(e){
+    function postArticle(e){
         e.preventDefault();
         setLoading(true);
-        localStorage.removeItem('token');
-        const promise = axios.post(URL+"/post", post)
+        const promise = axios.post(URL+"/post", {
+            title: post.title,
+            paragraphs: post.paragraphs,
+            image: post.image,
+            category: post.category,
+            author: post.author
+        }, { headers: { Authorization: `Bearer ${token}` }});
         promise.then(res => {
             setLoading(false);
             navigate("/panel");
@@ -33,7 +39,7 @@ export default function ArticleForm({post, setPost}){
                     position="top-center"
                     reverseOrder={false}
             /></div>
-            <form onSubmit={postSignIn}>
+            <form onSubmit={postArticle}>
                     <input 
                         type="tex"
                         id="title"
