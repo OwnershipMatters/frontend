@@ -44,6 +44,7 @@ const Container = styled.div`
     @media (max-width: 1280px) {
         width: 360px;
         margin-top: 15px;
+        padding: 0;
         flex-direction: column-reverse;
         h1{
             font-size: 20px;

@@ -23,7 +23,7 @@ const Container = styled.div`
         font-family: "Work Sans";
         font-weight: 400;
         font-size: 40px;
-        text-align: justify;
+        text-align: center;
         span{
             color: var(--theme-color);
             font-weight: 700;

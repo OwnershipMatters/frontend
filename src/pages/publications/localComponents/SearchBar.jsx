@@ -18,7 +18,14 @@ export default function SearchBar({setPosts}){
     }
 
     useEffect(() => {
-        searchProducts()
+        if(search === ""){
+            axios.get(URL+"/lastposts/12")
+            .then(res => {
+                setPosts(res.data);
+            })
+            .catch(err => console.log(err));
+        }
+        else searchProducts()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
     

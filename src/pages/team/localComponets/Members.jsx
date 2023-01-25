@@ -8,7 +8,9 @@ export default function Members(){
         <Container>
             {
                 teamData.map((colab, index)=> (
-                    <MemberBox key={index} image={colab.image} name={colab.name} role={colab.role}/>
+                    <a key={colab.name} href={colab.social} target="_blank">
+                        <MemberBox image={colab.image} name={colab.name} role={colab.role}/>
+                    </a>    
                 ))
             }  
         </Container>
@@ -16,14 +18,16 @@ export default function Members(){
 };
 
 const Container = styled.div`
-    padding: 30px;
+    padding: 65px;
     width: 1280px;
     background-color: #D9D9D9;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: left;
     row-gap: 50px;
+    column-gap: 50px;
     @media (max-width: 1280px) {
         width: 360px;
+        justify-content: center;
     }
 `;

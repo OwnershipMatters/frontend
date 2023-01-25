@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
+import InputMask from 'react-input-mask';
+import dayjs from "dayjs";
 
 import Button from "../../../components/Button";
 import URL from "../../../URL";
@@ -16,13 +18,14 @@ export default function ArticleForm({post, setPost}){
     function postArticle(e){
         e.preventDefault();
         setLoading(true);
-        const promise = axios.post(URL+"/post", {
-            title: post.title,
-            paragraphs: post.paragraphs,
-            image: post.image,
-            category: post.category,
-            author: post.author
-        }, { headers: { Authorization: `Bearer ${token}` }});
+        const newPost = new FormData();
+        newPost.append("title", post.title);
+        newPost.append("paragraphs", post.paragraphs);
+        newPost.append("image", post.image);
+        newPost.append("category", post.category);
+        newPost.append("date", dayjs(post.date).toISOString());
+        console.log(newPost)
+        const promise = axios.post(URL+"/post", newPost, { headers: { Authorization: `Bearer ${token}` }});
         promise.then(res => {
             setLoading(false);
             navigate("/panel");
@@ -30,8 +33,7 @@ export default function ArticleForm({post, setPost}){
             toast.error(e.response.data);
             setLoading(false);
         })
-    }
-
+    };
 
     return(
         <Container>
@@ -39,7 +41,10 @@ export default function ArticleForm({post, setPost}){
                     position="top-center"
                     reverseOrder={false}
             /></div>
-            <form onSubmit={postArticle}>
+            <form 
+                onSubmit={postArticle}
+                encType="multipart/form-data"
+            >
                     <input 
                         type="tex"
                         id="title"
@@ -55,10 +60,10 @@ export default function ArticleForm({post, setPost}){
                         value={setPost.author}
                         required/>    
                     <input 
-                        type="url"
+                        type="file"
                         id="image"
                         placeholder="image"
-                        onChange={(e) => setPost({...post, image: e.target.value})}
+                        onChange={(e) => setPost({...post, image: e.target.files[0]})}
                         value={setPost.image}
                         required/>
                     <input 
@@ -68,6 +73,15 @@ export default function ArticleForm({post, setPost}){
                         onChange={(e) => setPost({...post, category: e.target.value})}
                         value={setPost.category}
                         required/>
+                    <InputMask 
+                        mask="9999-99-99"
+                        type="text"
+                        id="date"
+                        placeholder="date YYYY-MM-DD"
+                        onChange={(e) => setPost({...post, date: e.target.value})}
+                        value={setPost.date}
+                        required
+                    />  
                     <h3>To add a link write {`<a href="THE LINK WITH HTTPS" target="_blank">TEXT TO BE LINKED</a>`}</h3>    
                     <textarea 
                         className="text-input"

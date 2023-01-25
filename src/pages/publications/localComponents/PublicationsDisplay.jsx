@@ -33,5 +33,7 @@ const Container = styled.div`
     margin-top: 85px;
     @media (max-width: 1280px) {
         margin-top: 15px;
+        width: 360px;
+        justify-content: center;
     }
 `

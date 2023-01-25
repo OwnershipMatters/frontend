@@ -14,7 +14,7 @@ export default function PostArticle(){
         paragraphs: [],
         image: "",
         author: "",
-        date: Date.now(),
+        date: "",
         category: "",
         text: ""
     });
@@ -22,6 +22,7 @@ export default function PostArticle(){
     useEffect(() => {
         let newText = post.text.split("\n");
         setPost({...post, paragraphs: newText})
+        console.log(post)
     }, [post.text]);
 
     return(

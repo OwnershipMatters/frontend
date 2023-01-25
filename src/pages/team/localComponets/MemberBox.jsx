@@ -42,6 +42,6 @@ const Image = styled.div`
     width: 347px;
     height:345px;
     @media (max-width: 1280px) {
-        width: 360px;
+        width: 345px;
     }
 `

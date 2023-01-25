@@ -22,20 +22,20 @@ const Container = styled.div`
         margin-bottom: 30px;
     }
     a:link{
-        color: blue;
-        text-decoration: underline;
+        color: var(--theme-color);
     }
     a:visited{
-        color: purple;
-        text-decoration: underline;
+        color: var(--theme-color);
     }
     @media (max-width: 1280px) {
         width: 360px;
-        padding: 0;
+        padding: 15px 0;
         h1{
-            padding: 5px;
+            padding: 2px;
             width: 350px;
             font-size: 20px;
+            margin-bottom: 10px;
+            text-align: left;
         }
     }
 `
