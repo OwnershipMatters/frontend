@@ -5,7 +5,7 @@ import axios from "axios";
 import NavBar from "../../components/Navbar";
 import ArticleBody from "../article/localComponents/ArticleBody";
 import ArticleAuthor from "../article/localComponents/ArticleAuthor";
-import ArticleHeader from "../article/localComponents/ArticleHeader";
+import ArticleHeader from "./localComponents/ArticleHeader";
 import ArticleForm from "./localComponents/ArticleForm";
 import URL from "../../URL";
 
