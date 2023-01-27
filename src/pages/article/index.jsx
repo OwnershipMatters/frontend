@@ -8,23 +8,33 @@ import PublicationsHeader from "../../components/PublicationsHeader";
 import ArticleHeader from "./localComponents/ArticleHeader";
 import ContactUs from "../../components/ContactUs";
 import ArticleBody from "./localComponents/ArticleBody";
+import ArticleAuthor from "./localComponents/ArticleAuthor";
 import URL from "../../URL";
 import image from "./localAssets/eyes.png";
 
 export default function Article(){
 
+    const [author, setAuthor] = useState({})
     const [post, setPost] = useState();
+
     const { id } = useParams();
+
+    function getAuthor(post){
+        let search = post.author.split(" ");
+        axios.get(`${URL}/author/${search.join("-")}`)
+        .then(res=> setAuthor(res.data))
+        .catch(err=> console.log(err))
+    }
 
     useEffect(()=>{
         const promise = axios.get(`${URL}/post/${id}`);
         promise.then(res => {
             setPost(res.data);
+            getAuthor(res.data)
         })
         promise.catch(err => {
             console.log(err);
-        })
-
+        })    
     },[id]);
 
     return(
@@ -37,6 +47,7 @@ export default function Article(){
                     <>
                         <ArticleHeader post={post}/>
                         <ArticleBody post={post}/>
+                        <ArticleAuthor author={author}/>
                     </>
                 :
                     <h1>Loading</h1>

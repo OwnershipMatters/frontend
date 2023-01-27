@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import {useEffect, useState} from "react"
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 import NavBar from "../../components/Navbar";
 import ArticleBody from "../article/localComponents/ArticleBody";
+import ArticleAuthor from "../article/localComponents/ArticleAuthor";
 import ArticleHeader from "../article/localComponents/ArticleHeader";
 import ArticleForm from "./localComponents/ArticleForm";
-
+import URL from "../../URL";
 
 export default function PostArticle(){
 
@@ -18,6 +20,8 @@ export default function PostArticle(){
         category: "",
         text: ""
     });
+
+    const [author, setAuthor] = useState({})
     
     useEffect(() => {
         let newText = post.text.split("\n");
@@ -25,12 +29,20 @@ export default function PostArticle(){
         console.log(post)
     }, [post.text]);
 
+    useEffect(()=> {
+        let search = post.author.split(" ");
+        axios.get(`${URL}/author/${search.join("-")}`)
+        .then(res=> setAuthor(res.data))
+        .catch(err=> console.log(err))
+    }, [post.author])
+
     return(
         <Container>
             <NavBar/>
             <ArticleForm post={post} setPost={setPost}/>
             <ArticleHeader post={post}/>
             <ArticleBody post={post}/>
+            <ArticleAuthor  author={author}/>
         </Container>
     )
 };

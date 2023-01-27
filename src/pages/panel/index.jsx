@@ -16,6 +16,9 @@ export default function Panel(){
                 <Link to="/panel/post">
                     <button>Article Post</button>
                 </Link>
+                <Link to="/panel/authors">
+                    <button>Authors Registration</button>
+                </Link>
                 <Link to="/panel/email">
                     <button>Email Service</button>
                 </Link>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
@@ -12,14 +12,24 @@ import URL from "../../../URL";
 export default function ArticleForm({post, setPost}){
 
     const navigate = useNavigate();
+
     const [loading, setLoading] = useState(false);
+    const [authors, setAuthors] = useState([]);
+
     const token = localStorage.getItem('token');
+
+    useEffect(()=> {
+        axios.get(URL+"/authors")
+        .then(res => setAuthors(res.data))
+        .catch(err =>  console.log(err))
+    }, [])
 
     function postArticle(e){
         e.preventDefault();
         setLoading(true);
         const newPost = new FormData();
         newPost.append("title", post.title);
+        newPost.append("author", post.author);
         newPost.append("paragraphs", post.paragraphs);
         newPost.append("image", post.image);
         newPost.append("category", post.category);
@@ -32,7 +42,7 @@ export default function ArticleForm({post, setPost}){
         }).catch(e => {
             toast.error(e.response.data);
             setLoading(false);
-        })
+        });
     };
 
     return(
@@ -46,19 +56,28 @@ export default function ArticleForm({post, setPost}){
                 encType="multipart/form-data"
             >
                     <input 
-                        type="tex"
+                        type="text"
                         id="title"
                         placeholder="title"
                         onChange={(e) => setPost({...post, title: e.target.value})}
                         value={setPost.title}
-                        required/>
-                    <input 
+                        required/>  
+                    <select 
                         type="text"
                         id="author"
-                        placeholder="author"
                         onChange={(e) => setPost({...post, author: e.target.value})}
                         value={setPost.author}
-                        required/>    
+                        required>
+                            <option value="">Author</option>
+                        {
+                            authors.length > 0?
+                            authors.map((author)=> (
+                                <option key={author.name+"-key"} value={author.name}>{author.name}</option>
+                            ))
+                            :
+                            <option>LOADING</option>
+                        }
+                    </select>    
                     <input 
                         type="file"
                         id="image"
@@ -111,6 +130,11 @@ const Container = styled.div`
             font-size: 30px;
             padding-left: 10px;
 
+        }
+        select{
+            width: 1000px;
+            height: 50px;
+            font-size: 30px;
         }
         textarea{
             height: 1000px;

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import dayjs from "dayjs";
 
+import URL from "../../../URL";
+
 export default function ArticleHeader({post}){
+
     return (
         <Container>
             <Image post={post}/>
@@ -62,7 +65,7 @@ const Container = styled.div`
 const Image = styled.div`
     width: 329px;
     height: 437px;
-    background: url(${(props) => props.post.image});
+    background: url(${(props) => URL + props.post.image});
     background-size: cover;
     background-position: -80px;
     @media (max-width: 1280px) {
