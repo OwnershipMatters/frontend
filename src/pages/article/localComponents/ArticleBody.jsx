@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export default function ArticleBody({post}){
-    const {paragraphs} = post;
     return (
         <Container>
-            {paragraphs.map((paragraph, index) => (
-                <h1 key={`${index}+ 'paragraph'`} dangerouslySetInnerHTML={{ __html: paragraph }} />
-            ))}
+            <div dangerouslySetInnerHTML={{ __html: post.text }}></div>
         </Container>
     )
 };
@@ -14,7 +11,7 @@ export default function ArticleBody({post}){
 const Container = styled.div`
     width: 1280px;
     padding: 50px 50px 50px 50px;
-    h1{
+    p{
         font-family: "Playfair Display";
         font-weight: 400;
         font-size: 35px;

@@ -22,12 +22,6 @@ export default function PostArticle(){
     });
 
     const [author, setAuthor] = useState({})
-    
-    useEffect(() => {
-        let newText = post.text.split("\n");
-        setPost({...post, paragraphs: newText})
-        console.log(post)
-    }, [post.text]);
 
     useEffect(()=> {
         let search = post.author.split(" ");

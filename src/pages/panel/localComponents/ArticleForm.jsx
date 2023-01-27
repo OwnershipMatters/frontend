@@ -5,9 +5,13 @@ import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 import InputMask from 'react-input-mask';
 import dayjs from "dayjs";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; 
+
 
 import Button from "../../../components/Button";
 import URL from "../../../URL";
+import Quill from "quill";
 
 export default function ArticleForm({post, setPost}){
 
@@ -18,11 +22,23 @@ export default function ArticleForm({post, setPost}){
 
     const token = localStorage.getItem('token');
 
+    const formats = [ 'bold', 'italic', 'underline', 'strike', 'list', 'bullet', 'indent', 'align', 'link', 'header', 'blockquote' ];
+    const modules = {
+        clipboard: {
+            matchVisual: false,
+            formats: formats
+        }
+    };
+
     useEffect(()=> {
         axios.get(URL+"/authors")
         .then(res => setAuthors(res.data))
         .catch(err =>  console.log(err))
     }, [])
+
+    useEffect(()=>{
+        console.log(post)
+    }, [post.text])
 
     function postArticle(e){
         e.preventDefault();
@@ -30,11 +46,10 @@ export default function ArticleForm({post, setPost}){
         const newPost = new FormData();
         newPost.append("title", post.title);
         newPost.append("author", post.author);
-        newPost.append("paragraphs", post.paragraphs);
+        newPost.append("text", post.text);
         newPost.append("image", post.image);
         newPost.append("category", post.category);
         newPost.append("date", dayjs(post.date).toISOString());
-        console.log(newPost)
         const promise = axios.post(URL+"/post", newPost, { headers: { Authorization: `Bearer ${token}` }});
         promise.then(res => {
             setLoading(false);
@@ -101,15 +116,7 @@ export default function ArticleForm({post, setPost}){
                         value={setPost.date}
                         required
                     />  
-                    <h3>To add a link write {`<a href="THE LINK WITH HTTPS" target="_blank">TEXT TO BE LINKED</a>`}</h3>    
-                    <textarea 
-                        className="text-input"
-                        type="text"
-                        id="text"
-                        placeholder="text"
-                        onChange={(e) => setPost({...post, text: e.target.value})}
-                        value={setPost.text}
-                        required/>    
+                    <ReactQuill className="quill" formats={formats} modules={modules} value={post.text}  onChange={(value) => setPost({...post, text: value})} /> 
                     <Button loading={loading}/>
                 </form>
         </Container>
@@ -136,12 +143,10 @@ const Container = styled.div`
             height: 50px;
             font-size: 30px;
         }
-        textarea{
+        .quill{
             height: 1000px;
             width: 1000px;
-            margin-bottom: 15px;
-            font-size: 30px;
-            overflow-wrap: break-word;
+            margin-bottom: 50px;
             padding: 10px;
         }
     }
