@@ -67,10 +67,9 @@ const Image = styled.div`
     height: 437px;
     background: url(${(props) => URL + props.post.image});
     background-size: cover;
-    background-position: -80px;
     @media (max-width: 1280px) {
         margin-top: 15px;
         width: 360px;
-        background-position: -80px;
+
     }
 `
