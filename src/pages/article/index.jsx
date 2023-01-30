@@ -21,7 +21,7 @@ export default function Article(){
 
     function getAuthor(post){
         let search = post.author.split(" ");
-        axios.get(`${URL}/author/${search.join("-")}`)
+        axios.get(`${URL}/author/${search.join("*")}`)
         .then(res=> setAuthor(res.data))
         .catch(err=> console.log(err))
     }
