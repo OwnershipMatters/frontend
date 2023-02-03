@@ -11,6 +11,7 @@ import ArticleBody from "./localComponents/ArticleBody";
 import ArticleAuthor from "./localComponents/ArticleAuthor";
 import URL from "../../URL";
 import image from "./localAssets/eyes.png";
+import Disclaimer from "./localComponents/Disclaimer";
 
 export default function Article(){
 
@@ -52,7 +53,7 @@ export default function Article(){
                 :
                     <h1>Loading</h1>
             }
-            
+            <Disclaimer/>
             <ContactUs/>
         </Container>
     )

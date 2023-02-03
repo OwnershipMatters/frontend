@@ -17,7 +17,7 @@ const Container = styled.div`
     width: 1280px;
     height: 332px;
     display: flex;
-    background-color: #D9D9D9;
+    background-color: var(--theme-color);
     align-items: center;
     padding: 10px 20px;
     margin: 50px 0;
@@ -25,14 +25,16 @@ const Container = styled.div`
         font-family: "Playfair Display";
         font-weight: 700;
         font-size: 70px;
-        color: var(--theme-color);
+        color: white;
+        margin-left: 10px;
     }
     h2{
         font-family: "Playfair Display";
         font-weight: 400;
-        font-size: 30px;
-        margin-left: 30px;
+        font-size: 25px;
+        padding: 30px;
         text-align: justify;
+        color: white;
     }
     @media (max-width: 1280px) {
         flex-direction: column;

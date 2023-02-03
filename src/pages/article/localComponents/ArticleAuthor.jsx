@@ -9,6 +9,7 @@ export default function AuthorBio({author}){
                 <Image image={author.image}/>
                 <div className="right">
                     <h1>ABOUT THE AUTHOR</h1>
+                    <h1 className="author">{author.name}</h1>
                     <h2>{author.bio}</h2>
                 </div>
             </Container>
@@ -20,7 +21,7 @@ export default function AuthorBio({author}){
 const Container = styled.div`
     width: 1280px;
     display: flex;
-    padding: 60px;
+    padding: 0 60px 60px 60px;
     .right{
         margin-left: 10px;
     }
@@ -33,7 +34,11 @@ const Container = styled.div`
         font-size: 30px;
         font-weight: 400;
         margin-top: 30px;
-        text-align: justify;
+        text-align: left;
+    }
+    .author{
+        color: var(--theme-color);
+        margin-top: 10px;
     }
     @media (max-width: 1280px) {
         width: 360px;
@@ -57,11 +62,9 @@ const Image = styled.div`
     width: 328px;
     height: 436px;
     background: url(${(props) => URL + props.image});
-    background-position: -80px;
     background-size: cover;
     @media (max-width: 1280px) {
         margin-top: 15px;
         width: 360px;
-        background-position: -80px;
     }
 `

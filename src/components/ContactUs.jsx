@@ -5,7 +5,7 @@ export default function ContactUs(){
       <Container>
         <h1>Contact us</h1>
           <div className="icons">
-            <a href="mailto: jmartinsr@pm.me" target="_blank" rel='noreferrer'>
+            <a href="mailto: ownershipmatters@protonmail.com" target="_blank" rel='noreferrer'>
               <ion-icon name="mail-outline"></ion-icon>
             </a>  
             <a href="https://www.linkedin.com/company/ownershipmatters/" target="_blank" rel='noreferrer'>
