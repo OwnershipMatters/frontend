@@ -20,7 +20,7 @@ export default function GetToKnow() {
       <Right>
         <h1>Get to Know Us</h1>
         <h2>
-            Ownership Matters is a free publication platform and community of practice bringing together the diverse voices of those building the next economy. We welcome the many frameworks and ways of reimagining the future of our market and institutions. Here, we identify solidarity, democracy, mutualism, decentralization, impact investing, shared ownership and governance as colorful pieces of the same vibrant mosaic. We seek to untangle our communal life from the profit-at-all-costs hegemonic paradigm through collective action and cooperation, building a system that serves all people and the planet.
+            Ownership Matters is a free publishing platform and community of practice bringing together the diverse voices of those building the next economy. We welcome the many frameworks and ways of reimagining the future of our market and institutions. Here, we identify solidarity, democracy, mutualism, decentralization, impact investing, shared ownership and governance as colorful pieces of the same vibrant mosaic. We seek to untangle our communal life from the profit-at-all-costs hegemonic paradigm through collective action and cooperation, building a system that serves all people and the planet.
         </h2>
       </Right>
     </Container>
