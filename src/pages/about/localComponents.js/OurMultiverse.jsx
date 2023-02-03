@@ -19,7 +19,7 @@ export default function OurMultiverse(){
                         <li><span>sparking powerful conversations</span></li>
                         <li><span>engaging in critical dialogue</span></li>
                     </ul>
-                    <h2>We seeks to create a <span>plural space for actions and ideas</span> open to the vast solidarity ecosystem. Here, entrepreneurs, funders, scholars, grassroots movement leaders, and enthusiasts are welcome to share their stories, enlighting the challenges and possibilities faced by <span>alternative institutional designs and mission-driven organizations</span>. Ownership Matters explore the connections among multiple approaches to economic democracy and build new bridges between our many ecosystem partners.</h2>
+                    <h2>We seek to create a <span>plural space for actions and ideas</span> open to the vast solidarity ecosystem. Here, entrepreneurs, funders, scholars, grassroots movement leaders, and enthusiasts are welcome to share their stories, enlighting the challenges and possibilities faced by <span>alternative institutional designs and mission-driven organizations</span>. Ownership Matters explore the connections among multiple approaches to economic democracy and build new bridges between our many ecosystem partners.</h2>
                 </div>
             </div>
             <img src={img2} alt="some people"/>
