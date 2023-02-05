@@ -12,6 +12,8 @@ import Login from "./pages/panel/Login";
 import PostArticle from "./pages/panel/PostArticle";
 import EmailService from "./pages/panel/EmailService";
 import AuthorRegistration from "./pages/panel/AuthorRegistration";
+import PostEdit from "./pages/panel/postedit";
+import EditForm from "./pages/panel/postedit/EditForm";
 
 export const Router = () => {
   return (
@@ -29,6 +31,8 @@ export const Router = () => {
         <Route path="/panel/post" element={<PostArticle/>} />
         <Route path="/panel/email" element={<EmailService/>} />
         <Route path="/panel/authors" element={<AuthorRegistration/>} />
+        <Route path="/panel/edit/post" element={<PostEdit/>} />
+        <Route path="/panel/edit/post/:id" element={<EditForm />} />
       </Routes>
       <GlobalStyles />
     </BrowserRouter>

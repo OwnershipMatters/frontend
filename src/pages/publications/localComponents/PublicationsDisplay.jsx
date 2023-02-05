@@ -9,8 +9,8 @@ export default function PublicationsDisplay({posts}){
             {
                 posts 
                 ?
-                posts.map((post, index)=> (
-                        <Link key={index} to={`/article/${post.id}`}>
+                posts.map((post)=> (
+                        <Link key={post.title} to={`/article/${post.id}`}>
                             <TextBox post={post}/>
                         </Link>
                 ))

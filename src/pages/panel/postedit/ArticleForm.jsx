@@ -38,14 +38,7 @@ export default function ArticleForm({post, setPost}){
     function postArticle(e){
         e.preventDefault();
         setLoading(true);
-        const newPost = new FormData();
-        newPost.append("title", post.title);
-        newPost.append("author", post.author);
-        newPost.append("text", post.text);
-        newPost.append("image", post.image);
-        newPost.append("category", post.category);
-        newPost.append("date", dayjs(post.date).toISOString());
-        const promise = axios.post(URL+"/post", newPost, { headers: { Authorization: `Bearer ${token}` }});
+        const promise = axios.put(URL+`/post`, {...post, date: dayjs(post.date).toISOString()}, { headers: { Authorization: `Bearer ${token}` }});
         promise.then(res => {
             setLoading(false);
             navigate("/panel");
@@ -88,13 +81,6 @@ export default function ArticleForm({post, setPost}){
                             <option>LOADING</option>
                         }
                     </select>    
-                    <input 
-                        type="file"
-                        id="image"
-                        placeholder="image"
-                        onChange={(e) => setPost({...post, image: e.target.files[0]})}
-                        value={setPost.image}
-                        required/>
                     <input 
                         type="text"
                         id="category"
