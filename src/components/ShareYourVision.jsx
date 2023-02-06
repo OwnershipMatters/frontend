@@ -36,10 +36,10 @@ const Container = styled.div`
     @media (max-width: 1280px) {
         width: 360px;
         h1{
-            font-size: 40px;
+            font-size: 30px;
         }
         h2{
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 `

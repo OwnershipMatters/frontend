@@ -80,7 +80,7 @@ const Tab = styled.div`
     width: 52px;
     height: 29px;
     h2{
-      font-size: 10px;
+      font-size: 9px;
     }
   }
 `;

@@ -30,6 +30,9 @@ export default function GetToKnow() {
 const Container = styled.div`
   display: flex;
   width: 100%;
+  @media (max-width: 1280px) {
+    margin-top: -15px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -113,11 +116,15 @@ const Right = styled.div`
   @media (max-width: 1280px) {
     width: 350px;
     padding: 0 5px;
+    h1{
+      font-size: 20px;
+    }
     h2{
       max-width: 350px;
       font-size: 20px;
       display: block;
       height: auto;
+      text-align: left;
     }
   }
 `;

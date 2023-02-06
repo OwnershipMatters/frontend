@@ -10,6 +10,7 @@ import Mural from "./localComponents/Mural";
 import ShareYourVision from "./../../components/ShareYourVision";
 
 import URL from "./../../URL"
+import MailList from "../../components/MailList";
 
 export default function Home() {
 

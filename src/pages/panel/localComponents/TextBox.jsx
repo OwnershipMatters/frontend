@@ -14,6 +14,7 @@ export default function TextBox({post}){
                 <h1>{post.title}</h1>
                 <h2>{post.author}</h2>
                 <h2>Views: {post.views}</h2>
+                <button>DELETE</button>
             </div>
         </Container>
     )
@@ -48,6 +49,10 @@ const Container = styled.div`
             font-size: 20px;
             font-weight: 400;
         }
+    }
+    button{
+        background-color: red;
+        color: white;
     }
     @media (max-width: 1280px) {
         width: 300px;

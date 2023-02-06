@@ -27,7 +27,7 @@ const Container = styled.div`
     @media (max-width: 1280px) {
         width: 360px;
         padding: 15px 0;
-        h1{
+        p{
             padding: 2px;
             width: 350px;
             font-size: 20px;

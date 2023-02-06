@@ -52,6 +52,7 @@ const Container = styled.div`
         h2{
             font-size: 18px;
             margin: 25px 5px;
+            text-align: center;
         }
         h3{
             margin: 15px;

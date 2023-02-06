@@ -95,13 +95,20 @@ const Container = styled.div`
             width: 360px;
             h1{
                 margin: 5px;
-                font-size: 50px;
+                font-size: 30px;
+                text-align: center;
             }
         }
         .right{
             width: 360px;
             padding: 15px;
             font-size: 15px;
+            h2{
+                font-size: 15px;
+            }
+            span{
+                font-size: 15px;
+            }
         }
     }
 `

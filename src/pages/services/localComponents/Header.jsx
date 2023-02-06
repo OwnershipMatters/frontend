@@ -43,21 +43,23 @@ const Container = styled.div`
     @media (max-width: 1280px) {
         width: 360px;
         flex-direction: column;
+        margin-top: 30px;
         img{
             width: 325px;
             height: 300px;
         }
         .right{
-            padding: 0;
+            padding: 20px 0 0 0;
             h1{
-                font-size: 35px;
+                font-size: 25px;
                 text-align: center;
             }
             h2{
                 margin-top: 10px;
-                font-size: 20px;
+                font-size: 15px;
                 text-align: justify;
                 width: 360px;
+                text-align: center;
             }
         }
     }

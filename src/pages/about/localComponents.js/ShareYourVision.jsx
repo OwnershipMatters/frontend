@@ -41,14 +41,17 @@ const Container = styled.div`
     @media (max-width: 1280px) {
         width: 360px;
         flex-direction: column;
+        margin-top: 30px;
         img{
-            width: 300px;
+            width: 250px;
         }
         h1{
-
+            font-size: 30px;
         }
         h2{
+            margin-top: 10px;
             padding: 5px;
+            font-size: 20px;
         }
     }
 `

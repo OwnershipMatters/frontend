@@ -10,10 +10,10 @@ import Article from "./pages/article";
 import Panel from "./pages/panel";
 import Login from "./pages/panel/Login";
 import PostArticle from "./pages/panel/PostArticle";
-import EmailService from "./pages/panel/EmailService";
 import AuthorRegistration from "./pages/panel/AuthorRegistration";
 import PostEdit from "./pages/panel/postedit";
 import EditForm from "./pages/panel/postedit/EditForm";
+import EmailService from "./pages/panel/emailservice";
 
 export const Router = () => {
   return (

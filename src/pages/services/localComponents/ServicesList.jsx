@@ -36,8 +36,10 @@ const Container = styled.div`
     }
     @media (max-width: 1280px) {
         width: 360px;
+        margin-top: 30px;
         img{
             width: 360px;
         }
+        row-gap: 10px;
     }
 `

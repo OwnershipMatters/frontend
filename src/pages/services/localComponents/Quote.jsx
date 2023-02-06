@@ -40,12 +40,16 @@ const Container = styled.div`
         flex-direction: column;
         width: 360px;
         height: auto;
+        margin: 15px 0;
         h1{
-            font-size: 40px;
+            font-size: 30px;
+            width: 300px;
         }
         h2{
             margin-left: 5px;
-            font-size: 25px;
+            font-size: 20px;
+            text-align: left;
+            padding: 10px;
         }
         
     }
