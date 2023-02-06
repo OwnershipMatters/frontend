@@ -57,10 +57,13 @@ const Container = styled.div`
         .right{
             padding: 5px;
             h1{
-            font-size: 15px;
+                font-size: 14px;
+                text-align: left;
+                margin-top: 5px;
             }
             h2{
-            font-size: 12px;
+                margin-top: -5px;
+                font-size: 12px;
             }
         } 
     }
