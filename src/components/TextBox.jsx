@@ -59,7 +59,7 @@ const Container = styled.div`
             h1{
                 font-size: 14px;
                 text-align: left;
-                margin-top: 5px;
+                margin: 0;
             }
             h2{
                 margin-top: -5px;

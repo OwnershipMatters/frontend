@@ -35,5 +35,6 @@ const Container = styled.div`
         margin-top: 15px;
         width: 360px;
         justify-content: center;
+        row-gap: 20px;
     }
 `
