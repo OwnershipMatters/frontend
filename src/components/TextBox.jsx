@@ -55,7 +55,7 @@ const Container = styled.div`
             height: 150px;
         }
         .right{
-            padding: 5px;
+            padding: 12px;
             h1{
                 font-size: 14px;
                 text-align: left;
