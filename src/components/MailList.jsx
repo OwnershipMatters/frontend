@@ -9,8 +9,9 @@ export default function MailList(){
                 <h1>Don't want to miss anything?</h1>
                 <h2>Ownership Matters writes to our community every few weeks with updates on the newest stories and events.</h2>
                 <form>
-                    <input></input>
-                    <input></input>
+                    <input placeholder="name" />
+                    <input placeholder="e-mail" />
+                    <button>subscribe</button>
                 </form>
             </div>
         </Container>
@@ -46,5 +47,36 @@ const Container = styled.div`
             margin-top: 10px;
             text-align: center;
         }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        align-items: center;
+    }
+    input{
+        width: 358px;
+        height: 46px;
+        background-color: var(--theme-color);
+        border: none;
+        margin-bottom: 24px;
+        color: white;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    input::placeholder{
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-family: "Inter";
+    }
+    button{
+        height: 46px;
+        width: 198px;
+        background-color: #D9D9D9;
+        border: none;
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 25px;
     }
 `
