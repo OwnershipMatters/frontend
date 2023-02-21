@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import TextBox from "./TextBox";
+import TextBox from "./../../../components/TextBox";
 
 export default function DisplayPosts({posts}){
 

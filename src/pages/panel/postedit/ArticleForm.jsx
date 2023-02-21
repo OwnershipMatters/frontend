@@ -48,12 +48,26 @@ export default function ArticleForm({post, setPost}){
         });
     };
 
+    function deletePost(id){
+        const token = localStorage.getItem('token');
+        // eslint-disable-next-line no-restricted-globals
+        if(confirm("Are you sure?") === true){
+            axios.delete(URL+`/post/${id}`, { headers: { Authorization: `Bearer ${token}` }})
+            .then(res => {
+                alert("Deleted!");
+                navigate("/panel/edit/post");
+            })
+            .catch(err => console.log(err))
+        }
+    };
+
     return(
         <Container>
             <div><Toaster
                     position="top-center"
                     reverseOrder={false}
             /></div>
+            <button className="bd" onClick={() => deletePost(post.id)}>DELETE</button>
             <form 
                 onSubmit={postArticle}
                 encType="multipart/form-data"
@@ -130,5 +144,14 @@ const Container = styled.div`
             margin-bottom: 50px;
             padding: 10px;
         }
+    }
+    .bd{
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-color: red;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
     }
 `

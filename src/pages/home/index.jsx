@@ -37,6 +37,7 @@ export default function Home() {
           <h1>Loading</h1>
       }
       <ShareYourVision/>
+      <MailList />
       <ContactUs/>
     </Container>
   );
